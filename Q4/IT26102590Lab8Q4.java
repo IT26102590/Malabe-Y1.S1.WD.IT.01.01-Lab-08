@@ -8,7 +8,8 @@ public class IT26102590Lab8Q4 {
 	
 	int studentArray[] = new int [8];
 	int count;
-	
+	boolean status = true;
+	boolean found = false;
 	
 	
 	//Enter + selection
@@ -17,7 +18,7 @@ public class IT26102590Lab8Q4 {
 	
 	System.out.print("Enter the student ID number: ");
 	
-	while (true){
+	while (status){
 		studentArray[count]= input.nextInt();
 		if (studentArray[count]>0){
 			
@@ -41,15 +42,24 @@ public class IT26102590Lab8Q4 {
 	for (int i=0; i<studentArray.length; i++){
 		
 		if (studentArray[i]==studentId){
+			found = true;
 			
-			System.out.println ("Student Avaliable!");
 			break;
 		}
 		
 		
 		
 		
-	} System.out.println("Student Unavaliable...");
+	} 
+		
+		if (found){
+			System.out.println("Student is Avaliable");
+			
+	} 
+	
+	else {
+		System.out.println ("StudentID is unavaliable");
+	}
 	
 	
 	
@@ -58,4 +68,5 @@ public class IT26102590Lab8Q4 {
 	
 }
 	
+
 
